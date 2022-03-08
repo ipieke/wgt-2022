@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  sql:
+    build:
+      context: sql
+    ports:
+      - "1433:1433"
+
+  mongo:
+    build:
+      context: mongo
+    ports:
+      - "27017:27017"
+
+  pg:
+    build:
+      context: pg
+    ports:
+      - "5432:5432"
